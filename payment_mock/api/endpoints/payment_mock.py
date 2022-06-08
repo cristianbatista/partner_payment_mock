@@ -6,9 +6,9 @@ import time
 router = APIRouter()
 
 
-@router.post("/user/login", status_code=status.HTTP_200_OK)
+@router.post("/user/login", status_code=status.HTTP_400_BAD_REQUEST)
 async def login() -> dict:
-    return {"token": "token1234"}
+    return {"code": 103, "msg": "Faltando senha" }
 
 
 @router.post("/account/transfers/ewally/", status_code=status.HTTP_200_OK)
