@@ -11,7 +11,7 @@ async def login() -> dict:
     return {"token": "token1234"}
 
 
-@router.post("/multibank/transfer/", status_code=status.HTTP_200_OK)
+@router.post("/account/transfers/ewally/", status_code=status.HTTP_200_OK)
 async def login() -> dict:
     time.sleep(60)
     return {"msg": "ok"}
