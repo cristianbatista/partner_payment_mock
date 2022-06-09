@@ -8,11 +8,9 @@ router = APIRouter()
 
 @router.post("/user/login", status_code=status.HTTP_200_OK)
 async def login() -> dict:
-    time.sleep(60)
     return {"token": "token1234" }
 
 
-@router.post("/account/transfers/ewally/", status_code=status.HTTP_200_OK)
+@router.post("/account/transfers/ewally/", status_code=status.HTTP_429_TOO_MANY_REQUESTS)
 async def login() -> dict:
-    time.sleep(60)
-    return {"msg": "ok"}
+    return {"error": "internal error"}
